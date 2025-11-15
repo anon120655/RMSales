@@ -1,0 +1,1 @@
+C:\WorkIBusiness\SalesPipeline\Code\Git_Sonar\.sonarqube\out\2
