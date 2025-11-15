@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace SalesPipeline.Infrastructure.Data.Entity;
+
+/// <summary>
+/// ตำแหน่ง
+/// </summary>
+public partial class Master_Position
+{
+    public int Id { get; set; }
+
+    /// <summary>
+    /// -1=ลบ  ,0=ไม่ใช้งาน  ,1=ใช้งาน
+    /// </summary>
+    public short Status { get; set; }
+
+    public DateTime CreateDate { get; set; }
+
+    public int CreateBy { get; set; }
+
+    public DateTime UpdateDate { get; set; }
+
+    public int UpdateBy { get; set; }
+
+    public string? Name { get; set; }
+
+    /// <summary>
+    /// 1=Admin 2=User
+    /// </summary>
+    public int Type { get; set; }
+
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
+}
